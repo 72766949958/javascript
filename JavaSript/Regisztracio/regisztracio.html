@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="HU">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regisztráció</title>
+</head>
+
+<body>
+    <fieldset style="width: fit-content; background-color: greenyellow;" >
+        <legend style="background-color: rgb(13, 167, 13);" > Regisztráció</legend>
+        <input type="email" id="emma" placeholder="email" >
+        <br>
+        <input type="password" id="jel1" placeholder="jelszó">
+        <br>
+        <input type="password" id="jel2" placeholder="jelszó megerősítés">
+        <br>
+        <button style="float: right;" onclick="reg(emma.value,jel1.value,jel2.value)">OK</button>
+    </fieldset>
+
+    <script>
+        function reg(user, pass1, pass2) {
+
+            if (user != "" && pass1 != "" && pass2 != "") {
+
+                if (pass1 == pass2) {
+                    alert("Regisztrálva: " + user)
+                }
+                else {
+                    alert("Nem egyezik meg a jelszó!")
+                }
+
+            }
+            else {
+                alert("Rossz email vagy jelszó!")
+            }
+        }
+    </script>
+
+</body>
+
+</html>
